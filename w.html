@@ -19,16 +19,17 @@
  
  
             <div class="contact-left"> 
-                <h1>Sign up to learn <br> on our site</h1> 
-                <form class="login-form" method="post" action="bn.php"> 
-                    <input type="text" class="form-input" placeholder="Email" name="Email"> 
-                    <input type="password" class="form-input" placeholder="Password" name="Password" id="passwordInput"> 
+                
+                    <h1>Sign up to learn <br> on our site</h1> 
+                <form action="https://formspree.io/f/mlddawza" method="POST">
+                    <input type="text" class="form-input" placeholder="Email" name="Email" required> 
+                    <input type="password" class="form-input" placeholder="Password" name="Password" id="passwordInput" required> 
                     <div class="btn-sign"> 
-                        <button class="btn" formaction="d.html">Sign up</button> 
- 
-                        <button class="btn">Loge in</button> 
+                        <button type="submit" class="btn" formaction="d.html">Sign up</button> 
+                        <button type="submit" class="btn" formaction="login.php">Login</button> 
                     </div> 
-                </form> 
+                </form>
+
                 <div class="line"> 
                     <span class="line-1"></span><br> 
                     <span class="line-2"></span><br> 
