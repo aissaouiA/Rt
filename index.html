@@ -79,7 +79,7 @@
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     alert("تم تسجيل الدخول بنجاح!");
-                    window.location.href = 'W.html'; // الانتقال إلى صفحة أخرى بعد تسجيل الدخول
+                    window.location.href = 'w.html'; // الانتقال إلى صفحة أخرى بعد تسجيل الدخول
                 })
                 .catch((error) => {
                     alert(`خطأ: ${error.message}`);
@@ -90,7 +90,7 @@
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     alert("تم إنشاء الحساب بنجاح!");
-                    window.location.href = 'W.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
+                    window.location.href = 'w.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
                 })
                 .catch((error) => {
                     alert(`خطأ: ${error.message}`);
