@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Rako website</title> 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style3.css"> 
 </head> 
 <body> 
     <br>
@@ -31,7 +31,7 @@
                 </div> 
             </div> 
             <div class="contact-right"> 
-                <img src="contact.png"> 
+                <img src="contact.png" alt="Contact Image"> 
             </div> 
         </div> 
     </section> 
@@ -48,14 +48,12 @@
                 return false;
             }
     
-            // التحقق من البريد الإلكتروني
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 errorMessage.textContent = 'Please enter a valid email address.';
                 return false;
             }
     
-            // إذا تم تمرير كل التحققات
             errorMessage.textContent = '';
             return true;
         }
@@ -77,7 +75,6 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
     
-        // دالة تسجيل الدخول
         function loginUser(email, password) {
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
@@ -89,19 +86,17 @@
                 });
         }
 
-        // دالة الاشتراك
         function signupUser(email, password) {
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     alert("تم إنشاء الحساب بنجاح!");
-                    window.location.href = 'index.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
+                    window.location.href = 'W.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
                 })
                 .catch((error) => {
                     alert(`خطأ: ${error.message}`);
                 });
         }
     
-        // معالجة نموذج تسجيل الدخول
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value;
@@ -112,7 +107,6 @@
             }
         });
 
-        // معالجة زر الاشتراك
         document.getElementById('signupButton').addEventListener('click', function() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
