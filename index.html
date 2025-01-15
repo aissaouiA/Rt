@@ -90,7 +90,7 @@
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     alert("تم إنشاء الحساب بنجاح!");
-                    window.location.href = 'w.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
+                    window.location.href = 'index.html'; // الانتقال إلى صفحة أخرى بعد الاشتراك
                 })
                 .catch((error) => {
                     alert(`خطأ: ${error.message}`);
